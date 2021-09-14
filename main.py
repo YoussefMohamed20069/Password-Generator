@@ -1,18 +1,11 @@
 import random
+from password import Password
 
-hash_password = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOQRSTUVWXYZ!@#$%^&*()_+][''\|;:?/><1234567890=-+_"
+def main():
+    print(Password.generatePassword())
 
-hash_length = len(hash_password)
-
-def generatePassword(hash_length, hash_password):
-    password = ""
-
-    password_length = int(input("Put the Length of the Password: "))
-
-    for i in range(password_length):
-        password += hash_password[round(random.uniform(0, hash_length))]
-
-    return password
-
-print(generatePassword(hash_length, hash_password))
-
+if __name__ == "__main__":
+    try:
+        main()
+    except:
+        print("Error, Try to Came back later")
