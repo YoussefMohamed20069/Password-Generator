@@ -64,6 +64,7 @@ def generatePassword(level):
 
     return password
 
+
 if __name__ == "__main__":
     main()
 
